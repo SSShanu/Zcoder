@@ -1,0 +1,40 @@
+/* Navbar.css */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .logo img {
+    width: 70px;
+    height: fit-content; /* Adjust based on your logo size */
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555; /* Change to desired hover color */
+    border-radius: 5px; /* Add round corners on hover */
+  }
+.login {
+    background-color: white;
+    color:#555;
+}  

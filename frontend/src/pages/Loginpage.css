@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.login-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Left Side */
+.login-left {
+  flex: 1;
+  background-color: #0c0c0c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-brand {
+  margin-bottom: 50px;
+}
+
+.brand-logo {
+  width: 150px;
+}
+
+.welcome-text {
+  text-align: center;
+}
+
+.welcome-text h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.welcome-text p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.login-btn {
+  padding: 10px 30px;
+  font-size: 18px;
+  color: #0c0c0c;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #d3d3d3;
+}
+
+/* Right Side */
+.login-right {
+  flex: 1;
+  background-color: white;
+  color: #0c0c0c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-right h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.login-right p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.signup-btn {
+  padding: 10px 30px;
+  font-size: 18px;
+  color: white;
+  background-color: #0c0c0c;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #333;
+}

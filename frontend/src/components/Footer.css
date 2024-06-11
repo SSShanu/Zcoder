@@ -1,0 +1,66 @@
+.footer {
+    background-color: #2c3e50; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 40px 20px; /* Padding for spacing */
+  }
+  
+  .footer h3 {
+    margin-bottom: 10px; /* Margin below section titles */
+    font-size: 18px; /* Font size for section titles */
+  }
+  
+  .footer .container {
+    display: flex; /* Use flexbox to arrange sections horizontally */
+    justify-content: space-between; /* Space sections equally */
+  }
+  
+  .footer-section {
+    width: 20%; /* Set all sections to take 20% of the total width */
+  }
+  
+  .footer-section ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px; /* Space between items */
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #bdd7ee; /* Light blue color for links */
+  }
+  
+  .footer-section ul li a:hover {
+    color: #fff; /* White color on hover */
+  }
+  
+  .footer-bottom {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center items vertically */
+    margin-top: 20px; /* Margin above bottom section */
+    border-top: 1px solid #767d84; /* Border above bottom section */
+    padding-top: 20px; /* Padding above content */
+    color: #bbb; /* Light grey color for bottom text */
+  }
+  
+  .footer-bottom .social-icons {
+    display: flex; /* Use flexbox for icons */
+  }
+  
+  .footer-bottom .social-icons a {
+    display: inline-block; /* Display links as inline blocks */
+    margin: 0 5px; /* Margin between icons */
+  }
+  
+  .footer-bottom .social-icons img {
+    width: 24px; /* Width for icons */
+    height: 24px; /* Height for icons */
+  }
+  
+  .footer-bottom p {
+    margin: 0; /* No margin for paragraphs */
+  }
+  

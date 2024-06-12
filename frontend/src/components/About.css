@@ -1,0 +1,70 @@
+/* About.css */
+
+.about {
+    width: 100%;
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #000;
+}
+
+.about h2 {
+    margin: 1rem 0;
+    color: #f8f8f8;
+}
+
+.about .container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.about .container > p {
+    margin: 1rem 0 3rem 0;
+    font-size: 1.2rem;
+    color: #f8f8f8;
+}
+
+.about .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 1rem;
+    column-gap: 0.5rem; /* Decreased gap */
+    row-gap: 1rem;
+}
+
+.about .card {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 390px;
+    width: 250px; /* Increased width */
+    padding: 3rem 2rem;
+    border: 1px solid #e7e8ea;
+    text-align: left;
+    border-radius: 24px;
+    margin: auto;
+    background-color: black;
+    transition: transform 0.4s ease-in-out;
+}
+
+.about .card:hover {
+    transform: scale(1.05);
+}
+
+.about .card h3 {
+    margin: 1rem 0;
+    color: #f8f8f8;
+}
+
+.about .card li {
+    color: #ccc;
+}
+
+.about .logo {
+    border-radius: 50px;
+    display: inline-flex;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.about .logo img { /* Ensure logo is styled correctly */
+    width: 100px; /* Adjust size as needed */
+}

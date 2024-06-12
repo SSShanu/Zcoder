@@ -1,0 +1,78 @@
+/* Style for the entire hero section */
+.hero {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    color: #f4eeff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#video {
+    position: absolute;
+ height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem; /* adjust as needed */
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+}
+
+/* Color styles for Zcoder and code editor */
+.zcoder {
+    color: #00d8ff; /* Blue color for Zcoder */
+}
+
+.code-editor {
+    color: #ffffff; /* White color for code editor */
+}
+
+/* Styles for the button group to position buttons below the text */
+.btn-group {
+    margin-top: 1rem; /* Adjust space between text and buttons */
+    display: flex;
+    gap: 1rem; /* Space between buttons */
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+    background-color: #00d8ff; /* Primary color */
+}
+
+.btn-outline {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    border: 2px solid #00d8ff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-color: transparent;
+    color: #00d8ff;
+}
+
+.btn:hover, .btn-outline:hover {
+    opacity: 0.8;
+}

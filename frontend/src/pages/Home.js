@@ -2,12 +2,13 @@
 import React from 'react';
 import NavBar from '../components/Navbar';
 import Footer from '../components/footer';
+import HomePageComponent from '../components/LeftSection';
 
 const Home = () => {
   return (
     <div>
       <NavBar />
-      <h1>Welcome to the Home Page</h1>
+      <HomePageComponent />
      <Footer />
     </div>
   );

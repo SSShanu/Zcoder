@@ -1,0 +1,59 @@
+.homepage-container {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Adjust accordingly */
+}
+
+.text-container {
+    max-width: 45%; /* Adjust width as needed */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth effect */
+    border: 2px solid #fff; /* White border color */
+    margin-right: 10px; /* Adjust spacing between text and image */
+}
+
+.text-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.image-container {
+    max-width: 45%; /* Adjust width as needed */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth effect */
+    border: 2px solid #fff; /* White border color */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px; /* Apply border-radius for rounded corners */
+}

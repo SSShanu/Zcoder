@@ -1,6 +1,11 @@
 import React from 'react';
 import './Footer.css';
-
+import google from '../assests/google.jpg';
+import facebook from '../assests/facebook.jpg';
+import Instagram from '../assests/instagram.jpg';
+import linkedin from '../assests/linkedin.jpg';
+import youtube from '../assests/youtube.jpg';
+import twitter from '../assests/twitter.jpg';
 function Footer() {
   return (
     <footer className="footer">
@@ -43,12 +48,12 @@ function Footer() {
       <div className="footer-bottom">
         <p>www.zcoder.com</p>
         <div className="social-icons">
-          <a href="#"><img src="path/to/google-icon.png" alt="Google" /></a>
-          <a href="#"><img src="path/to/facebook-icon.png" alt="Facebook" /></a>
-          <a href="#"><img src="path/to/twitter-icon.png" alt="Twitter" /></a>
-          <a href="#"><img src="" alt="Instagram" /></a>
-          <a href="#"><img src="path/to/youtube-icon.png" alt="YouTube" /></a>
-          <a href="#"><img src="path/to/linkedin-icon.png" alt="LinkedIn" /></a>
+          <a ><img src={google} alt="Google" /></a>
+          <a ><img src={facebook} alt="Facebook" /></a>
+          <a ><img src={twitter} alt="Twitter" /></a>
+          <a ><img src={Instagram} alt="Instagram" /></a>
+          <a ><img src={youtube} alt="YouTube" /></a>
+          <a ><img src={linkedin} alt="LinkedIn" /></a>
         </div>
         <p>Follow Us</p>
       </div>

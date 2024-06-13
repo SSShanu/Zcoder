@@ -11,7 +11,7 @@
 .content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 80%; /* Adjust accordingly */
 }
 
@@ -44,11 +44,14 @@
 }
 
 .image-container {
+    animation: image linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 45%;
     max-width: 45%; /* Adjust width as needed */
     padding: 20px;
-    border-radius: 10px;
+    /*border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth effect */
-    border: 2px solid #fff; /* White border color */
+    /*border: 2px solid #fff; /* White border color */
 }
 
 .image-container img {
@@ -56,4 +59,15 @@
     height: auto;
     display: block;
     border-radius: 10px; /* Apply border-radius for rounded corners */
+}
+
+@keyframes image {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }

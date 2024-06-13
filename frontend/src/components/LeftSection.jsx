@@ -6,9 +6,9 @@ const HomePageComponent = () => {
         <div className="homepage-container">
             <div className="content">
                 <div className="text-container">
-                    <h1>Leave the binary tree behind.</h1>
-                    <p>Build coding questions using our library of dev-friendly content that challenges them to solve the problems they’d actually tackle on the job.</p>
-                    <button className="cta-button">Start free trial →</button>
+                    <h1>Use the In-built Code-Editor.</h1>
+                    <p>Solve coding problems collaboratively in our development friendly environment with your friends and colleagues.</p>
+                    <button className="cta-button">Use our Code-Editor →</button>
                 </div>
                 <div className="image-container">
                     <img src="https://th.bing.com/th/id/R.6bf341683642c2257a7ca6bb5c9e81f4?rik=OXWTg8M4RIlGFA&pid=ImgRaw&r=0" alt="Desc" />

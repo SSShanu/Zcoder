@@ -4,7 +4,8 @@ import Editor from "../components/Editor";
 import { initSocket } from "../socket";
 import toast from "react-hot-toast";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
-import logo from '../logo1.jpg';
+import logo from '../logo2.jpg';
+import './EditorPage.css'; // Import the new CSS file
 
 function EditorPage() {
   const [clients, setClients] = useState([]);
@@ -84,32 +85,23 @@ function EditorPage() {
   }
 
   return (
-    <div className="enter-room">
-    <div className="editor-page-container">
-      <div className="col-md-2 bg-dark text-light editor-panel">
-        <img
-          src={logo} alt="Logo" className="img-fluid logo-img" />
-        <hr className="panel-heading" />
-
-        {/* Client list container */}
-        <div className="d-flex flex-column flex-grow-1 overflow-auto">
+    <div className="editor-page">
+      <div className="editor-sidebar">
+        <img src={logo} alt="Logo" className="logo-img" />
+        <div className="members-section">
           <span className="members-heading">Members</span>
           {clients.map((client) => (
             <Client key={client.socketId} username={client.username} />
           ))}
         </div>
-
-        <hr />
-        {/* Buttons */}
-        <div className="mt-auto">
-          <button onClick={copyRoomId} className="btn btn-success">Copy Room ID</button>
-          <button onClick={leaveRoom} className="btn btn-danger mt-2 mb-2 px-3 btn-block">
-            Leave Room
-          </button>
-        </div>
+        <button onClick={copyRoomId} className="btn copy-btn">
+          Copy Room ID
+        </button>
+        <button onClick={leaveRoom} className="btn leave-btn">
+          Leave Room
+        </button>
       </div>
-
-      <div className="col-md-10 text-light d-flex flex-column">
+      <div className="editor-main">
         <Editor  
           socketRef={socketRef} 
           roomId={roomId}
@@ -120,11 +112,11 @@ function EditorPage() {
         />
       </div>
     </div>
-    </div>
   );
 }
 
 export default EditorPage;
+
 /*import React from 'react';
 import './EnterRoom.css'; // Import the CSS file
 

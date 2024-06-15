@@ -1,0 +1,26 @@
+.question-sidebar {
+    width: 20%;
+    background-color: #1f1f1f;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    height: 100vh;
+  }
+  
+  .sidebar-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background: #282828;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .sidebar-button:hover {
+    background: #3a3a3a;
+  }
+  

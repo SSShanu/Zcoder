@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import axios from 'axios';
 
 const modalStyles = {
@@ -90,4 +90,148 @@ const AddQuestionModal = ({ closeModal }) => {
   );
 };
 
+export default AddQuestionModal;*/
+/*import React, { useState } from 'react';
+import axios from 'axios';
+import './AddQuestionModal.css'; // Import the CSS file for styling
+
+const AddQuestionModal = ({ closeModal }) => {
+  const [formData, setFormData] = useState({
+    topic: '',
+    difficulty: '',
+    link: '',
+    platform: '',
+    note: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    e.stopPropagation(); // Prevent event propagation
+    try {
+      const response = await axios.post('http://localhost:8000/questions', formData);
+      console.log('Question Added:', response.data);
+      closeModal();
+    } catch (error) {
+      console.error('Error adding question:', error);
+    }
+  };
+
+  return (
+    <>
+      <div className="modal-overlay" onClick={closeModal}></div>
+      <div className="modal-content" onClick={(e) => e.stopPropagation() }>
+        <h2>Add New Question</h2>
+        <form onSubmit={handleSubmit}>
+           <div className="form-group">
+            <label>Topic</label>
+            <input type="text" name="topic" value={formData.topic} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Difficulty</label>
+            <input type="text" name="difficulty" value={formData.difficulty} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Link</label>
+            <input type="text" name="link" value={formData.link} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Platform</label>
+            <input type="text" name="platform" value={formData.platform} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Note</label>
+            <textarea name="note" value={formData.note} onChange={handleChange}></textarea>
+          </div>
+          <div className="form-buttons">
+            <button type="submit" className="submit-btn">Add Question</button>
+            <button type="button" onClick={closeModal} className="cancel-btn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </>
+  );
+};
+
 export default AddQuestionModal;
+*/
+import React, { useState } from 'react';
+import axios from 'axios';
+import './AddQuestionModal.css'; // Import the updated CSS file for styling
+
+const AddQuestionModal = ({ closeModal }) => {
+  const [formData, setFormData] = useState({
+    topic: '',
+    difficulty: '',
+    link: '',
+    platform: '',
+    note: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8000/questions', formData);
+      console.log('Question Added:', response.data);
+      closeModal();
+    } catch (error) {
+      console.error('Error adding question:', error);
+    }
+  };
+
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  };
+
+  return (
+    <div className="modal-overlay" onClick={handleOverlayClick}>
+      <div className="modal-content">
+        <h2>Add New Question</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Topic</label>
+            <input type="text" name="topic" value={formData.topic} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Difficulty</label>
+            <input type="text" name="difficulty" value={formData.difficulty} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Link</label>
+            <input type="text" name="link" value={formData.link} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Platform</label>
+            <input type="text" name="platform" value={formData.platform} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label>Note</label>
+            <textarea name="note" value={formData.note} onChange={handleChange}></textarea>
+          </div>
+          <div className="form-buttons">
+            <button type="submit" className="submit-btn">Submit</button>
+            <button type="button" className="cancel-btn" onClick={closeModal}>Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default AddQuestionModal;
+

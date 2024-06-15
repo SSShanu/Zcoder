@@ -6,15 +6,25 @@ import Instagram from '../assests/instagram.jpg';
 import linkedin from '../assests/linkedin.jpg';
 import youtube from '../assests/youtube.jpg';
 import twitter from '../assests/twitter.jpg';
+import { useNavigate } from 'react-router-dom';
+
 function Footer() {
+
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
+
+
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-section">
           <h3>Learning Resources</h3>
           <ul>
-            <li><a href="#">Learning courses</a></li>
-            <li><a href="#">Practice Problems</a></li>
+            <li><a onClick={(event) => { event.preventDefault(); handleNavigation('/courses'); }}>Learning courses</a></li>
+            <li><a onClick={(event) => { event.preventDefault(); handleNavigation('/questions'); }}>Practice Problems</a></li>
             
             
           </ul>
@@ -22,8 +32,9 @@ function Footer() {
         <div className="footer-section">
           <h3>Programming Tools</h3>
           <ul>
-            <li><a href="#">Online IDE</a></li>
-            <li><a href="#">Practice Problems</a></li>
+          <li><a onClick={(event) => { event.preventDefault(); handleNavigation('/Room'); }}>Access Online IDE</a></li>
+
+            <li><a onClick={(event) => { event.preventDefault(); handleNavigation('/questions'); }}>Practice Problems</a></li>
           </ul>
         </div>
         <div className="footer-section">

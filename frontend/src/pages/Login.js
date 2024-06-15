@@ -25,8 +25,8 @@ const Login = () => {
   };
 
   return (
-    <div className='SSS'>
-      <NavBar />
+    <div>
+    <NavBar />
     <form onSubmit={handleSubmit}>
       <div className="login-page">
       <div className="login-left">
@@ -54,7 +54,7 @@ const Login = () => {
             <input type="password" id="password" name="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
           </div>
           
-          <button type="submit" className="signup-btn">SIGN IN</button>
+          <button type="submit" className="signup-btn"  onClick={() => handleNavigation('/')}>SIGN IN</button>
         </form>
       </div>
     </div>

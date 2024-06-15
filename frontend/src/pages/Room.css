@@ -1,0 +1,77 @@
+/* Room.css */
+.container-fluid {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light background color for the entire container */
+    padding: 20px;
+  }
+  
+  .card {
+    margin-top: 20px;
+  }
+  
+  .card-body {
+    text-align: center;
+    background-color: #343a40; /* Dark background color for the card body */
+    color: #fff; /* Text color for the card body */
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+  }
+  
+  .btn-success {
+    background-color: #28a745; /* Green background color for the success button */
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-success:hover {
+    background-color: #218838; /* Darker green background color on button hover */
+  }
+  
+  .text-success {
+    cursor: pointer;
+    color: #28a745; /* Green color for the 'New Room' text */
+    transition: color 0.3s;
+  }
+  
+  .text-success:hover {
+    color: #218838; /* Darker green color on text hover */
+  }
+  
+  .container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    animation: fadeIn 1s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

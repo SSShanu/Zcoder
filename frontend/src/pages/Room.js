@@ -3,6 +3,8 @@ import { v4 as uuid } from "uuid";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../components/Navbar";
+import logo from "../logo.jpg";
+import "./Room.css"
 
 function Room() {
   const [roomId, setRoomId] = useState("");
@@ -41,16 +43,16 @@ function Room() {
 
   return (
     <div> <NavBar/> 
-    <div className="container-fluid">
+    <div className="container">
       <div className="row justify-content-center align-items-center min-vh-100">
         <div className="col-12 col-md-6">
           <div className="card shadow-sm p-2 mb-5 bg-secondary rounded">
             <div className="card-body text-center bg-dark">
               <img
-                src="/images/codecast.png"
+                src={logo}
                 alt="Logo"
                 className="img-fluid mx-auto d-block"
-                style={{ maxWidth: "150px" }}
+                style={{ maxWidth: "50px" }}
               />
               <h4 className="card-title text-light mb-4">Enter the ROOM ID</h4>
 
@@ -91,7 +93,7 @@ function Room() {
                 </span>
               </p>
             </div>
-          </div>
+          </div>  
         </div>
       </div>
     </div>

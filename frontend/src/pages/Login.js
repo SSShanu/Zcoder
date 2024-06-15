@@ -25,8 +25,8 @@ const Login = () => {
   };
 
   return (
-    <div>
-    <NavBar />
+    <div className='SSS'>
+      <NavBar />
     <form onSubmit={handleSubmit}>
       <div className="login-page">
       <div className="login-left">

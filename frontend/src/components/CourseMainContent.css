@@ -1,0 +1,52 @@
+.main-content {
+    flex: 1;
+    padding: 75px;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .main-title {
+    margin-bottom: 50px; /* Increased distance between the title and search bar */
+  }
+  
+  .search-bar-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center; /* Align the items vertically in the middle */
+    margin-bottom: 50px; /* Increased margin to center-align the search bar */
+  }
+  
+  .search-bar {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 40px;
+  }
+  
+  .loading-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #999;
+  }
+  
+  .courses-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    animation: fadeIn 1s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

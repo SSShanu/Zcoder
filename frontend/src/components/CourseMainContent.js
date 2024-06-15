@@ -1,25 +1,7 @@
-// components/CourseMainContent.js
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CourseCard from './CourseCard';
-
-const mainContentStyles = {
-  flex: 1,
-  padding: '20px',
-};
-
-const searchBarStyles = {
-  width: '100%',
-  padding: '10px',
-  marginBottom: '20px',
-  fontSize: '16px',
-};
-
-const coursesGridStyles = {
-  display: 'grid',
-  gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
-  gap: '20px',
-};
+import './CourseMainContent.css';
 
 const CourseMainContent = ({ selectedTopic }) => {
   const [courses, setCourses] = useState([]);
@@ -42,10 +24,10 @@ const CourseMainContent = ({ selectedTopic }) => {
     : courses;
 
   return (
-    <div className="main-content" style={mainContentStyles}>
+    <div className="main-content">
       <h1>All Courses Catalog</h1>
-      <input type="text" placeholder="Browse Courses" style={searchBarStyles} />
-      <div className="courses-grid" style={coursesGridStyles}>
+      <input type="text" placeholder="Browse Courses" className="search-bar" />
+      <div className="courses-grid">
         {filteredCourses.map(course => (
           <CourseCard key={course._id} course={course} />
         ))}
@@ -55,3 +37,4 @@ const CourseMainContent = ({ selectedTopic }) => {
 }
 
 export default CourseMainContent;
+  

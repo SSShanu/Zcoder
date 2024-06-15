@@ -1,0 +1,31 @@
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: #333; /* Darker background color */
+  color: white; /* Text color changed to white */
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  padding: 10px; /* Updated padding for the separate box-type design */
+  border-radius: 5px;
+  background-color: #555; /* Background color for the list items */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+  background-color: #777; /* Darker background color on hover */
+}

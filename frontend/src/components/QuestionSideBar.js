@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 
 const QuestionSideBar = ({ onTopicSelect }) => {
   const topics = ['All', 'array', 'Tree', 'Graph', 'Dynamic Programming', 'String'];
@@ -14,4 +14,27 @@ const QuestionSideBar = ({ onTopicSelect }) => {
   );
 };
 
+export default QuestionSideBar;*/
+import React from 'react';
+import './QuestionSideBar.css'; // Import the CSS file for styling
+
+const QuestionSideBar = ({ onTopicSelect }) => {
+  const topics = ['All', 'Array', 'Tree', 'Graph', 'Dynamic Programming', 'String'];
+
+  return (
+    <div className="question-sidebar">
+      {topics.map(topic => (
+        <button
+          key={topic}
+          onClick={() => onTopicSelect(topic)}
+          className="sidebar-button"
+        >
+          {topic}
+        </button>
+      ))}
+    </div>
+  );
+};
+
 export default QuestionSideBar;
+

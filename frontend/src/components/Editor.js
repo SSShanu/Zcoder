@@ -8,58 +8,74 @@ import CodeMirror from "codemirror";
 
 function Editor({ socketRef, roomId, onCodeChange }) {
   const editorRef = useRef(null);
+  const isUserChange = useRef(true);
 
   useEffect(() => {
     const init = async () => {
       const editor = CodeMirror.fromTextArea(
         document.getElementById("realtimeEditor"),
         {
-          mode: "javascript",
+          mode: { name: "javascript", json: true },
           theme: "dracula",
           autoCloseTags: true,
           autoCloseBrackets: true,
           lineNumbers: true,
         }
       );
-
       editorRef.current = editor;
-
       editor.setSize(null, "100%");
+
       editor.on("change", (instance, changes) => {
         const { origin } = changes;
         const code = instance.getValue();
         onCodeChange(code);
-
-        if (origin !== 'setValue') {
-          console.log('Emitting code-change:', code);
-          socketRef.current.emit("code-change", {
-            roomId,
-            code,
-          });
+        if (origin !== "setValue" && isUserChange.current) {
+          debounceEmitCodeChange(code);
         }
       });
     };
-    init();
-  }, [onCodeChange, roomId, socketRef]);
 
+    init();
+  }, []);
+
+  // Debounce function to limit the rate of emitting code-change events
+  const debounceEmitCodeChange = debounce((code) => {
+    socketRef.current.emit("code-change", {
+      roomId,
+      code,
+    });
+  }, 300);
+
+  // Debounce function to limit the rate of emitting events
+  function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+  }
+
+  // data receive from server
   useEffect(() => {
     if (socketRef.current) {
-      socketRef.current.on("code-change", ({ code }) => {
-        console.log('code-change event received:', code);
-        if (code !== null) {
+      const handleCodeChange = ({ code }) => {
+        if (code !== null && code !== editorRef.current.getValue()) {
+          isUserChange.current = false;
           editorRef.current.setValue(code);
+          isUserChange.current = true;
         }
-      });
+      };
+
+      socketRef.current.on("code-change", handleCodeChange);
+
+      return () => {
+        socketRef.current.off("code-change", handleCodeChange);
+      };
     }
-    return () => {
-      if (socketRef.current) {
-        socketRef.current.off("code-change");
-      }
-    };
-  }, [socketRef]);
+  }, [socketRef.current]);
 
   return (
-    <div style={{ height: "600px", width: "1400px" }}>
+    <div style={{ height: "600px", width: "600px" }}>
       <textarea id="realtimeEditor"></textarea>
     </div>
   );

@@ -26,7 +26,7 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className='SSS'>
 <NavBar />
     <form onSubmit={handleSubmit}>
       <div className="login-page">

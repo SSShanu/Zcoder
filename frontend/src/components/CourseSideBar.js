@@ -1,20 +1,11 @@
-// components/CourseSideBar.js
 import React from 'react';
-
-const sidebarStyles = {
-  width: '200px',
-  height: '100vh',
-  backgroundColor: '#f4f4f4',
-  padding: '20px',
-  borderRight: '1px solid #ccc',
-  overflowY: 'auto',
-};
+import './CourseSideBar.css';
 
 const CourseSideBar = ({ setTopic }) => {
-  const topics = ['All Courses', 'Python', 'Java', 'C Programming', 'C++','Machine Learning', 'Web development', 'App development', 'Competitive Programming']; // Add more topics as needed
+  const topics = ['All Courses', 'Python', 'Java', 'C Programming', 'C++', 'Machine Learning', 'Web development', 'App development', 'Competitive Programming'];
 
   return (
-    <div className="sidebar" style={sidebarStyles}>
+    <div className="sidebar">
       <h2>Courses</h2>
       <ul>
         {topics.map(topic => (

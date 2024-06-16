@@ -51,7 +51,7 @@ const About = () => {
                 <li>2nd Year Btech</li>
                 <li>IIT Guwahati</li>
                 <li>+917016990353</li>
-                <li><a href='https://www.linkedin.com/in/vivek-prajapati-4a4b20261'>linkekin</a></li>
+                <li><a href='https://www.linkedin.com/in/vivek-prajapati-4a4b20261'>LinkedIn</a></li>
             </ul>
         </div>
                        
@@ -66,7 +66,7 @@ const About = () => {
                 <li>2nd Year Btech</li>
                 <li>IIT Guwahati</li>
                 <li>+917637952281</li>
-                <li><a href='https://www.linkedin.com/in/prashurjya-bhagawati-b67770215/"'>linkekin</a></li>
+                <li><a href='https://www.linkedin.com/in/prashurjya-bhagawati-b67770215/"'>LinkedIn</a></li>
             </ul>
         </div>
                         
@@ -76,12 +76,12 @@ const About = () => {
             <div className="logo">
                 <img src={logo1} alt="Logo" />
             </div>
-            <h3>Shanu singh sengar</h3>
+            <h3>Shanu Singh Sengar</h3>
             <ul>
                 <li>2nd Year Btech</li>
                 <li>IIT Guwahati</li>
                 <li>+918602271108</li>
-                <li><a href='https://www.linkedin.com/in/shanu-sengar-226b59261/'>linkekin</a></li>
+                <li><a href='https://www.linkedin.com/in/shanu-sengar-226b59261/'>LinkedIn</a></li>
             </ul>
         </div>
                         
@@ -96,7 +96,7 @@ const About = () => {
                 <li>2nd Year Btech</li>
                 <li>IIT Guwahati</li>
                 <li>+917067817996</li>
-                <li><a href='https://www.linkedin.com/in/harishankar-yadav-7386a1280/'>linkekin</a></li>
+                <li><a href='https://www.linkedin.com/in/harishankar-yadav-7386a1280/'>LinkedIn</a></li>
             </ul>
         </div>
                         

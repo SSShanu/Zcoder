@@ -14,6 +14,7 @@
     align-items: center;
     justify-content: center;
     width: 80%; /* Adjust accordingly */
+    margin-bottom: 20px; /* Add margin at the bottom of each content section */
 }
 
 .text-container {
@@ -45,30 +46,29 @@
 }
 
 .image-container {
-    animation: image linear;
+    animation: SSS 2s linear;  /* Apply the animation */
     animation-timeline: view();
-    animation-range: entry 0 cover 45%;
+    animation-range: entry 0 cover 38%;
     max-width: 45%; /* Adjust width as needed */
     padding: 20px;
-    /*border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth effect */
-    /*border: 2px solid #fff; /* White border color */
+    border-radius: 10px; /* Apply border-radius for rounded corners */
+    text-align: center;  /* Center align the image */
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
-    display: block;
+    max-width: 100%; /* Ensure the image takes up the container's width */
+    max-height: 100%; /* Ensure the image takes up the container's height */
     border-radius: 10px; /* Apply border-radius for rounded corners */
 }
 
-@keyframes image {
+@keyframes SSS {
     from {
         opacity: 0;
-        scale: 0.5;
+        transform: scale(0.5); /* Corrected 'scale' property */
     }
-    to{
+    to {
         opacity: 1;
-        scale: 1;
+        transform: scale(1); /* Corrected 'scale' property */
     }
 }
